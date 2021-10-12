@@ -1,0 +1,94 @@
+@import "reset";
+
+@import "public/contact";
+@import "public/home";
+@import "public/login";
+@import "public/projects";
+@import "public/project-info";
+
+@import "admin/dashboard";
+@import "admin/projetcs";
+@import "admin/delete-projetc";
+@import "admin/projects-info";
+@import "admin/update-project";
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #050508;
+}
+
+header {
+    background-color: #050508;
+    padding: 10px 0;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            border-right: 1px solid #fff;
+            width: 33%;
+            text-align: center;
+            a {
+                color: #fff;
+                text-transform: capitalize;
+                font-size: 1.8rem;
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    animation: nav 3s infinite;
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+@keyframes nav {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #575772;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+footer {
+    background-color: #050508;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    span {
+        width: 100%;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+.link-invisible {
+    display: contents;
+    color: unset;
+    text-decoration: none;
+}

@@ -1,0 +1,107 @@
+.publicProjectlistWrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    margin-top: 50px;
+    opacity: 0;
+    animation: entering 3s forwards;
+}
+
+.publicProjectLi {
+    width: 40%;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 4% 4.9%;
+    &:nth-child(4n + 1) {
+        border-right: solid 1px #000;
+        border-top: solid 1px #000;
+    }
+    &:nth-child(8n + 2) {
+        border-bottom: solid 1px #000;
+    }
+    &:nth-child(8n + 5) {
+        border-top: solid 1px #000;
+    }
+    &:nth-child(8n + 8) {
+        border-top: solid 1px #000;
+    }
+    &:nth-child(8n + 3) {
+        border-left: solid 1px #000;
+    }
+    &:nth-child(8n + 7) {
+        border-left: solid 1px #000;
+    }
+    &:nth-child(8n + 4) {
+        border-right: solid 1px #000;
+    }
+    &:nth-child(8n + 8) {
+        border-right: solid 1px #000;
+    }
+}
+
+.publicProjectWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    h2 {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+}
+
+.img-project {
+    width: 100%;
+}
+
+@media screen and(max-width: 940px) {
+    .publicProjectLi {
+        min-width: unset;
+        min-height: unset;
+        width: 80%;
+        padding: 4% 4.9%;
+        &:nth-child(n + 1) {
+            border: none;
+        }
+        &:nth-child(6n + 1) {
+            border-right: solid 1px #000;
+            border-top: solid 1px #000;
+        }
+        &:nth-child(6n + 2) {
+            border-top: solid 1px #000;
+            border-left: solid 1px #000;
+            border-bottom: solid 1px #000;
+        }
+        &:nth-child(6n + 4) {
+            border-top: solid 1px #000;
+            border-left: solid 1px #000;
+        }
+        &:nth-child(6n + 5) {
+            border-right: solid 1px #000;
+            border-bottom: solid 1px #000;
+            border-top: solid 1px #000;
+        }
+    }
+}
+
+@media screen and(max-width: 320px) {
+    .publicProjectlistWrapper {
+        .publicProjectLi {
+            width: 90%;
+            min-width: unset;
+            min-height: unset;
+        }
+    }
+}
+
+@keyframes entering {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
