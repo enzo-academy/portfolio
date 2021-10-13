@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\publicController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [publicController::class, 'home']);
+Route::get('/legal-notices', [publicController::class, 'legalNotices']);
 
 Route::get('/projects', [publicController::class, 'projects']);
 Route::get('/projects/{projectId}', [publicController::class, 'projectInfo'])->where('projectId', '[0-9]+');
 
-Route::get('/contact', [publicController::class, 'contact']);
-Route::post('/contact', [publicController::class, 'contactConfirm']);
+Route::get('/contact', [ContactController::class, 'contact']);
+Route::post('/contact', [ContactController::class, 'contactConfirm']);
 
 Route::get('/auth/login', [publicController::class, 'login']);
 
@@ -33,3 +35,8 @@ Route::get('/admin/projects/{projectId}/update', [adminController::class, 'updat
 Route::post('/admin/projects/{projectId}/update', [adminController::class, 'projectUpdated'])->where('projectId', '[0-9]+');
 Route::get('/admin/projects/{projectId}/delete', [adminController::class, 'deleteProject'])->where('projectId', '[0-9]+');
 Route::post('/admin/projects/{projectId}/delete', [adminController::class, 'projectDeleted'])->where('projectId', '[0-9]+');
+
+
+Route::fallback(function() {
+    return view('404');
+});

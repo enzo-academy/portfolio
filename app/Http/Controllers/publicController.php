@@ -13,31 +13,26 @@ class publicController extends Controller
     }
 
     function projectInfo($id)
-    {       
-            $project = [
-                'id' => $id
-            ];
-            return view('public/projects/project-info')->withProject($project);
+    {
+        $project = [
+            'id' => $id
+        ];
+        return view('public/projects/project-info')->withProject($project);
     }
 
     function projects()
     {
-            $projects = project::all();
-            return view('public/projects/projects', compact('projects'));
-    }
-
-    function contact()
-    {
-        return view('public/contact/contact');
-    }
-
-    function contactConfirm()
-    {
-        return view('public/contact/confirm');
+        $projects = project::all();
+        return view('public/projects/projects', compact('projects'));
     }
 
     function login()
     {
         return view('public/login/login');
+    }
+
+    function LegalNotices()
+    {
+        return view('public/legal-notices');
     }
 }

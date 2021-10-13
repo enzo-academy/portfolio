@@ -5,6 +5,7 @@
 @import "public/login";
 @import "public/projects";
 @import "public/project-info";
+@import "public/legal-notices";
 
 @import "admin/dashboard";
 @import "admin/projetcs";
@@ -76,6 +77,9 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    .wrapper {
+        display: flex;
+    }
     span {
         width: 100%;
         font-size: 1.5rem;
@@ -91,4 +95,42 @@ main {
     display: contents;
     color: unset;
     text-decoration: none;
+}
+
+.lost-wrapper {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    h1 {
+        font-size: 7rem;
+        font-weight: bold;
+        opacity: 0;
+        animation: lost 5s forwards;
+    }
+    h2 {
+        margin-top: 50px;
+        font-size: 2rem;
+        opacity: 0;
+        animation: lost 5s forwards;
+        animation-delay: 2s;
+    }
+}
+
+@keyframes lost {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.error-contact {
+    color: #db2929;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }

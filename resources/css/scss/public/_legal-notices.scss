@@ -1,0 +1,29 @@
+.legal-notices {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .ml-wrapper {
+        padding: 0 3%;
+    }
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    h3 {
+        margin-top: 20px;
+        font-size: 1.6rem;
+    }
+    p {
+        margin-top: 20px;
+        font-size: 1.15rem;
+    }
+    li {
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+}

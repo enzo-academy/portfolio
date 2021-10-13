@@ -49,12 +49,89 @@ table {
 }
 
 .contact-wrapper {
-  height: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  -webkit-animation: contact 2s forwards;
+          animation: contact 2s forwards;
+}
+.contact-wrapper h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: left;
+}
+.contact-wrapper .contact-form {
+  padding: 50px;
+  background-color: #050508;
+  text-align: center;
+  width: 60%;
+  border-radius: 14px;
+  box-shadow: 0px 0px 7px 0px;
+  max-width: 800px;
+}
+.contact-wrapper .contact-form button {
+  font-size: 1.1rem;
+  text-align: right;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+.contact-wrapper .form-group {
+  width: 100%;
+  margin: 0 auto;
+}
+.contact-wrapper .form-group input,
+.contact-wrapper .form-group textarea {
+  max-width: 500px;
+  width: 80%;
+  margin-top: 20px;
+  max-width: 80%;
+  font-size: 1.2rem;
+  padding: 10px 5px;
+}
+.contact-wrapper .form-group textarea {
+  min-height: 200px;
 }
 
+@-webkit-keyframes contact {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes contact {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contact-wrapper {
+    margin: 20px 0;
+    height: 70vh;
+  }
+  .contact-wrapper h1 {
+    font-size: 1.4rem;
+  }
+  .contact-wrapper .contact-form {
+    padding: 20px;
+    width: 75%;
+  }
+  .contact-wrapper .form-group input,
+.contact-wrapper .form-group textarea {
+    font-size: 1.1rem;
+  }
+  .contact-wrapper .form-group textarea {
+    min-height: 100px;
+  }
+}
 .body-height {
   height: 100%;
   -webkit-animation: background-home 5s;
@@ -166,7 +243,7 @@ table {
   width: 40%;
   min-width: 300px;
   min-height: 300px;
-  padding: 4% 4.9%;
+  padding: 4% 4.95%;
 }
 .publicProjectLi:nth-child(4n+1) {
   border-right: solid 1px #000;
@@ -262,6 +339,36 @@ table {
     opacity: 100%;
   }
 }
+.legal-notices {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.legal-notices .ml-wrapper {
+  padding: 0 3%;
+}
+.legal-notices h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+.legal-notices h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.legal-notices h3 {
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+.legal-notices p {
+  margin-top: 20px;
+  font-size: 1.15rem;
+}
+.legal-notices li {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
 body {
   min-height: 100vh;
 }
@@ -337,6 +444,9 @@ footer {
   width: 100%;
   bottom: 0;
 }
+footer .wrapper {
+  display: flex;
+}
 footer span {
   width: 100%;
   font-size: 1.5rem;
@@ -351,4 +461,53 @@ main {
   display: contents;
   color: unset;
   text-decoration: none;
+}
+
+.lost-wrapper {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+}
+.lost-wrapper h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-animation: lost 5s forwards;
+          animation: lost 5s forwards;
+}
+.lost-wrapper h2 {
+  margin-top: 50px;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-animation: lost 5s forwards;
+          animation: lost 5s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes lost {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lost {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.error-contact {
+  color: #db2929;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }

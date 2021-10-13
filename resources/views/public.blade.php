@@ -27,6 +27,7 @@
     <footer>
         <div class="wrapper">
             <span>All rights reserved</span>
+            <span><a href="{{ url('legal-notices') }}">Legal notices</a></span>
         </div>
     </footer>
 </body>
